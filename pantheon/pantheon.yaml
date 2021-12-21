@@ -1,0 +1,20 @@
+pantheon:
+    pantheon_version: 1.2 
+    pantheon_state: release
+
+project:
+    project_name: E4S
+    project_website: https://e4s-project.github.io
+
+workflow:
+    workflow_name: Nyx Ascent Workflow
+    workflow_desc: sampling workflow 
+    workflow_version: gcc_9.3.0 
+    workflow_cinema-db: pantheon.cdb
+    workflow_app: nyx 
+    workflow_in-situ: in-situ
+    workflow_post-processing: post
+
+contact:
+    contact_name: David Rogers
+    contact_email: dhr@lanl.gov
