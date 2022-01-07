@@ -52,8 +52,8 @@ mkdir builddir
 mkdir instdir
 INSTALL_PREFIX=$(pwd)/instdir
 
-ASCENT=$(spack find -p ascent)
-ASCENT_INSTALL_DIR=${ASCENT##* }
+#ASCENT=$(spack find -p ascent)
+#ASCENT_INSTALL_DIR=${ASCENT##* }
 
 cd builddir
 cmake \
@@ -76,8 +76,9 @@ cmake \
     -DSUNDIALS_INDEX_SIZE:INT=32   \
     -DCUDA_ARCH=sm_70 ../
 
-make -j8 \
+#make -j8 \
         ASCENT_HOME=$ASCENT_INSTALL_DIR
+make -j8
 
 make install -j8
 
@@ -93,8 +94,12 @@ module load cuda/11.0.3
 
 make -j12 \
 	-f GNUmakefile.summit \
-	SUNDIALS_ROOT=$(pwd)/../../subprojects/sundials/instdir \
-        ASCENT_HOME=$ASCENT_INSTALL_DIR
+	SUNDIALS_ROOT=$(pwd)/../../subprojects/sundials/instdir
+  
+#make -j12 \
+#	-f GNUmakefile.summit \
+#	SUNDIALS_ROOT=$(pwd)/../../subprojects/sundials/instdir \
+#        ASCENT_HOME=$ASCENT_INSTALL_DIR
 
 
 # echo "--------------------------------------------------"

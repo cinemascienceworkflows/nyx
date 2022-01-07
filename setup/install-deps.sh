@@ -11,10 +11,10 @@ PANTHEON_SOURCE_ROOT=$PWD
 
 # these settings allow you to control what gets built ... 
 BUILD_CLEAN=true
-INSTALL_SPACK=true
+INSTALL_SPACK=false
 USE_SPACK_CACHE=false
-INSTALL_ASCENT=true
-INSTALL_APP=false
+INSTALL_ASCENT=false
+INSTALL_APP=true
 
 # spack data
 SPACK_COMPILER_MODULE=gcc/9.3.0
